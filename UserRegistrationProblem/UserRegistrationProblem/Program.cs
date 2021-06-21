@@ -12,7 +12,7 @@ namespace UserRegistrationProblem
         {
             UserRegistration validateUser = new UserRegistration();
             validateUser.validateFirstName("Shreya");
-        
+            validateUser.validateLastName("Malviya");
             Console.ReadKey();
         }
     }
