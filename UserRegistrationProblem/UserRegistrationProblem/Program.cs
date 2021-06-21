@@ -13,6 +13,7 @@ namespace UserRegistrationProblem
             UserRegistration validateUser = new UserRegistration();
             validateUser.validateFirstName("Shreya");
             validateUser.validateLastName("Malviya");
+            validateUser.validateEmailId("malviyashreya26@gmail.com");
             Console.ReadKey();
         }
     }
