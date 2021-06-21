@@ -112,5 +112,21 @@ namespace UserRegistrationProblem
                 Console.WriteLine(e.Message);
             }
         }
+        ////For Numeric Password
+        public void validateNumericPassword(string NumericPassword)
+        {
+            try
+            {
+                string stringForNumericPassword = "^.{8,}?";
+                if (Regex.IsMatch(NumericPassword, stringForNumericPassword))
+                    Console.WriteLine(NumericPassword + " is Valid");
+                else
+                    Console.WriteLine(NumericPassword + " is Invalid");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
     }
 }
