@@ -145,5 +145,25 @@ namespace UserRegistrationProblem
                 Console.WriteLine(e.Message);
             }
         }
+        ////For all email
+
+        public static string EMAIL_REGEXOne = "^[a-z0-9]+([._+-][0-9a-z]+)@+[a-z0-9]+.[a-z]{2,4}([.][a-z]{2}$)";
+        public static string EMAIL_REGEXTwo = "^[a-z0-9]+([._+-][0-9a-z]+)@+[a-z0-9]+.[a-z]{2,4}$";
+        public static string EMAIL_REGEXThree = "(^[a-z0-9]+)@+[a-z0-9]+.[a-z]{2,4}([.][a-z]{2}$)";
+        public static string EMAIL_REGEXFour = "(^[a-z0-9]+)@+[a-z0-9]+.[a-z]{2,4}$";
+        public void validateAllTypeEmail(string email)
+        {
+            try
+            {
+                if (Regex.IsMatch(email, EMAIL_REGEXOne) || Regex.IsMatch(email, EMAIL_REGEXTwo) || Regex.IsMatch(email, EMAIL_REGEXThree) || Regex.IsMatch(email, EMAIL_REGEXFour))
+                    Console.WriteLine(email + " is Valid");
+                else
+                    Console.WriteLine(email + " is Invalid");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
     }
 }

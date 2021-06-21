@@ -19,6 +19,10 @@ namespace UserRegistrationProblem
             validateUser.validateUperCasePassword("Shreya345");
             validateUser.validateNumericPassword("shreya@3345");
             validateUser.validateSpecialcarPassword("shreya@3345");
+            validateUser.validateAllTypeEmail("malviyashreya26@gmail.com");
+            validateUser.validateAllTypeEmail("malviyashreya5526@gmail.com");
+            validateUser.validateAllTypeEmail("malviyashre+26@gmail.com");
+            validateUser.validateAllTypeEmail("sabc_2002@gmail.com");
             Console.ReadKey();
         }
     }
