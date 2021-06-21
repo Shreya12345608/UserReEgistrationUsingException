@@ -60,5 +60,22 @@ namespace UserRegistrationProblem
                 Console.WriteLine(e.Message);
             }
         }
+        //For Mobile Number
+        public void validateMobileNumber(string mobileNumber)
+        {
+            try
+            {
+
+                string stringForMobileNumber = "^[0-9]{10}";
+                if (Regex.IsMatch(mobileNumber, stringForMobileNumber))
+                    Console.WriteLine(mobileNumber + " is Valid");
+                else
+                    Console.WriteLine(mobileNumber + " is Invalid");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
     }
 }
