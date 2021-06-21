@@ -96,5 +96,21 @@ namespace UserRegistrationProblem
                 Console.WriteLine(e.Message);
             }
         }
+        ////For Password
+        public void validateUperCasePassword(string ucPassword)
+        {
+            string stringForUCPassword = "^[A-Z]+.{8,}?";
+            try
+            {
+                if (Regex.IsMatch(ucPassword, stringForUCPassword))
+                    Console.WriteLine(ucPassword + " is Valid");
+                else
+                    Console.WriteLine(ucPassword + " is Invalid");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
     }
 }
