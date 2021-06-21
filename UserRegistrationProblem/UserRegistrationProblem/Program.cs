@@ -18,6 +18,7 @@ namespace UserRegistrationProblem
             validateUser.validatePassword("Shreya345");
             validateUser.validateUperCasePassword("Shreya345");
             validateUser.validateNumericPassword("shreya@3345");
+            validateUser.validateSpecialcarPassword("shreya@3345");
             Console.ReadKey();
         }
     }

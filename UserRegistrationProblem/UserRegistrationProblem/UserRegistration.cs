@@ -115,13 +115,30 @@ namespace UserRegistrationProblem
         ////For Numeric Password
         public void validateNumericPassword(string NumericPassword)
         {
+            string stringForNumericPassword = "^.{8,}?";
             try
             {
-                string stringForNumericPassword = "^.{8,}?";
+
                 if (Regex.IsMatch(NumericPassword, stringForNumericPassword))
                     Console.WriteLine(NumericPassword + " is Valid");
                 else
                     Console.WriteLine(NumericPassword + " is Invalid");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+        ////For Special  Password
+        public void validateSpecialcarPassword(string specialCarPassword)
+        {
+            string stringForNumericPassword = "^([a-zA-Z0-9])*[!@#$%^&*]{1}([a-zA-Z0-9])*$";
+            try
+            {
+                if (Regex.IsMatch(specialCarPassword, stringForNumericPassword))
+                    Console.WriteLine(specialCarPassword + " is Valid");
+                else
+                    Console.WriteLine(specialCarPassword + " is Invalid");
             }
             catch (Exception e)
             {
