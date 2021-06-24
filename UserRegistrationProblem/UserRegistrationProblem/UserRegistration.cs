@@ -7,163 +7,66 @@ using System.Threading.Tasks;
 
 namespace UserRegistrationProblem
 {
-    class UserRegistration
+    public class UserRegistration
     {
-        //For First NAme
-        public void validateFirstName(string firstName)
+        static string Name = "^[A-Z][a-z0-9A-Z]{3,}";
+        static string EmailId = "^[a-z0-9A-Z]+([._+-][a-z0-9A-Z]+)*[@][a-z0-9A-Z]+[.][a-zA-Z]{2,3}(.[a-zA-Z]{2,})?$";
+        static string mobileNo = "[1-9]{1}[0-9]{9}";
+        static string Password = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()]){1}[a-zA-Z0-9]{5,}";
+        public string validateFirstName(string name)
         {
-            string stringForFirstName = "^[A-Z][a-z]{3,}?";
-            try
+            if (Regex.IsMatch(name, Name))
             {
-
-                if (Regex.IsMatch(firstName, stringForFirstName))
-                    Console.WriteLine(firstName + " is Valid");
-
-                else
-                    Console.WriteLine(firstName + " is Invalid");
+                Console.WriteLine("Name is Valid");
+                return "Happy";
             }
-            catch (Exception e)
+            else
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine("Name is Invalid");
+                return "Sad";
             }
         }
-        //For last NAme
-        public void validateLastName(string lastName)
+        public string validateEmail(string email)
         {
-            string stringForLastName = "^[A-Z][a-z]{3,}?";
-            try
+            if (Regex.IsMatch(email, EmailId))
             {
-
-
-                if (Regex.IsMatch(lastName, stringForLastName))
-                    Console.WriteLine(lastName + " is Valid");
-                else
-                    Console.WriteLine(lastName + " is Invalid");
+                Console.WriteLine("Email ID is Valid");
+                return "Happy";
             }
-            catch (Exception e)
+            else
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine("Email is Invalid");
+                return "Sad";
             }
         }
-        //For email
-        public void validateEmailId(string emailID)
-        {
-            string stringForEmailId = "^[a-z0-9][-a-z0-9._]+@([-a-z0-9]+.)+[a-z]{2,5}$";
-            try
+            public string validateMobileNo(string mobileno)
             {
+                if (Regex.IsMatch(mobileno, mobileNo))
+                {
+                    Console.WriteLine("Mobile No is Valid");
+                    return "Happy";
+                }
+                else
+                {
+                    Console.WriteLine("Mobile No  is Invalid");
+                    return "Sad";
+                }
+            }
 
-                if (Regex.IsMatch(emailID, stringForEmailId))
-                    Console.WriteLine(emailID + " is Valid");
-                else
-                    Console.WriteLine(emailID + " is Invalid");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-        }
-        //For Mobile Number
-        public void validateMobileNumber(string mobileNumber)
+        public string validatePassword(string Password)
         {
-            string stringForMobileNumber = "^[0-9]{10}";
-            try
+            if (Regex.IsMatch(Password, Password))
             {
-
-
-                if (Regex.IsMatch(mobileNumber, stringForMobileNumber))
-                    Console.WriteLine(mobileNumber + " is Valid");
-                else
-                    Console.WriteLine(mobileNumber + " is Invalid");
+                Console.WriteLine( "Password is Valid");
+                return "Happy";
             }
-            catch (Exception e)
+            else
             {
-                Console.WriteLine(e.Message);
-            }
-        }
-        //For Password
-        public void validatePassword(string password)
-        {
-            string stringForPassword = "^.{8,}?";
-            try
-            {
-                if (Regex.IsMatch(password, stringForPassword))
-                    Console.WriteLine(password + " is Valid");
-                else
-                    Console.WriteLine(password + " is Invalid");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-        }
-        ////For Password
-        public void validateUperCasePassword(string ucPassword)
-        {
-            string stringForUCPassword = "^[A-Z]+.{8,}?";
-            try
-            {
-                if (Regex.IsMatch(ucPassword, stringForUCPassword))
-                    Console.WriteLine(ucPassword + " is Valid");
-                else
-                    Console.WriteLine(ucPassword + " is Invalid");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-        }
-        ////For Numeric Password
-        public void validateNumericPassword(string NumericPassword)
-        {
-            string stringForNumericPassword = "^.{8,}?";
-            try
-            {
-
-                if (Regex.IsMatch(NumericPassword, stringForNumericPassword))
-                    Console.WriteLine(NumericPassword + " is Valid");
-                else
-                    Console.WriteLine(NumericPassword + " is Invalid");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-        }
-        ////For Special  Password
-        public void validateSpecialcarPassword(string specialCarPassword)
-        {
-            string stringForNumericPassword = "^([a-zA-Z0-9])*[!@#$%^&*]{1}([a-zA-Z0-9])*$";
-            try
-            {
-                if (Regex.IsMatch(specialCarPassword, stringForNumericPassword))
-                    Console.WriteLine(specialCarPassword + " is Valid");
-                else
-                    Console.WriteLine(specialCarPassword + " is Invalid");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-        }
-        ////For all email
-
-        public static string EMAIL_REGEXOne = "^[a-z0-9]+([._+-][0-9a-z]+)@+[a-z0-9]+.[a-z]{2,4}([.][a-z]{2}$)";
-        public static string EMAIL_REGEXTwo = "^[a-z0-9]+([._+-][0-9a-z]+)@+[a-z0-9]+.[a-z]{2,4}$";
-        public static string EMAIL_REGEXThree = "(^[a-z0-9]+)@+[a-z0-9]+.[a-z]{2,4}([.][a-z]{2}$)";
-        public static string EMAIL_REGEXFour = "(^[a-z0-9]+)@+[a-z0-9]+.[a-z]{2,4}$";
-        public void validateAllTypeEmail(string email)
-        {
-            try
-            {
-                if (Regex.IsMatch(email, EMAIL_REGEXOne) || Regex.IsMatch(email, EMAIL_REGEXTwo) || Regex.IsMatch(email, EMAIL_REGEXThree) || Regex.IsMatch(email, EMAIL_REGEXFour))
-                    Console.WriteLine(email + " is Valid");
-                else
-                    Console.WriteLine(email + " is Invalid");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
+                Console.WriteLine("Password is Invalid");
+                return "Sad";
             }
         }
     }
 }
+
+

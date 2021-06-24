@@ -12,17 +12,17 @@ namespace UserRegistrationProblem
         {
             UserRegistration validateUser = new UserRegistration();
             validateUser.validateFirstName("Shreya");
-            validateUser.validateLastName("Malviya");
-            validateUser.validateEmailId("malviyashreya26@gmail.com");
-            validateUser.validateMobileNumber("8798761833");
-            validateUser.validatePassword("Shreya345");
-            validateUser.validateUperCasePassword("Shreya345");
-            validateUser.validateNumericPassword("shreya@3345");
-            validateUser.validateSpecialcarPassword("shreya@3345");
-            validateUser.validateAllTypeEmail("malviyashreya26@gmail.com");
-            validateUser.validateAllTypeEmail("malviyashreya5526@gmail.com");
-            validateUser.validateAllTypeEmail("malviyashre+26@gmail.com");
-            validateUser.validateAllTypeEmail("sabc_2002@gmail.com");
+            //validateUser.validateLastName("Malviya");
+            //validateUser.validateEmailId("malviyashreya26@gmail.com");
+            //validateUser.validateMobileNumber("8798761833");
+            //validateUser.validatePassword("Shreya345");
+            //validateUser.validateUperCasePassword("Shreya345");
+            //validateUser.validateNumericPassword("shreya@3345");
+            //validateUser.validateSpecialcarPassword("shreya@3345");
+            //validateUser.validateAllTypeEmail("malviyashreya26@gmail.com");
+            //validateUser.validateAllTypeEmail("malviyashreya5526@gmail.com");
+            //validateUser.validateAllTypeEmail("malviyashre+26@gmail.com");
+            //validateUser.validateAllTypeEmail("sabc_2002@gmail.com");
             Console.ReadKey();
         }
     }
