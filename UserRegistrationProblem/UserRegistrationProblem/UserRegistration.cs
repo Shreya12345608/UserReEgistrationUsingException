@@ -12,7 +12,7 @@ namespace UserRegistrationProblem
         static string Name = "^[A-Z][a-z0-9A-Z]{3,}";
         static string EmailId = "^[a-z0-9A-Z]+([._+-][a-z0-9A-Z]+)*[@][a-z0-9A-Z]+[.][a-zA-Z]{2,3}(.[a-zA-Z]{2,})?$";
         static string mobileNo = "[1-9]{1}[0-9]{9}";
-        static string Password = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()]){1}[a-zA-Z0-9]{5,}";
+        static string password = "[0-9a-zA-Z]{8,}$";
         public string validateFirstName(string name)
         {
             if (Regex.IsMatch(name, Name))
@@ -55,7 +55,7 @@ namespace UserRegistrationProblem
 
         public string validatePassword(string Password)
         {
-            if (Regex.IsMatch(Password, Password))
+            if (Regex.IsMatch(Password, password))
             {
                 Console.WriteLine( "Password is Valid");
                 return "Happy";
