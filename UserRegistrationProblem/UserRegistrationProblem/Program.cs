@@ -11,18 +11,18 @@ namespace UserRegistrationProblem
         static void Main(string[] args)
         {
             UserRegistration validateUser = new UserRegistration();
-            validateUser.validateFirstName("Shreya");
-            //validateUser.validateLastName("Malviya");
-            //validateUser.validateEmailId("malviyashreya26@gmail.com");
-            //validateUser.validateMobileNumber("8798761833");
-            //validateUser.validatePassword("Shreya345");
-            //validateUser.validateUperCasePassword("Shreya345");
-            //validateUser.validateNumericPassword("shreya@3345");
-            //validateUser.validateSpecialcarPassword("shreya@3345");
-            //validateUser.validateAllTypeEmail("malviyashreya26@gmail.com");
-            //validateUser.validateAllTypeEmail("malviyashreya5526@gmail.com");
-            //validateUser.validateAllTypeEmail("malviyashre+26@gmail.com");
-            //validateUser.validateAllTypeEmail("sabc_2002@gmail.com");
+            validateUser.ValidateFirstName("Shreya");
+            validateUser.ValidateFirstName("Malviya");
+            validateUser.ValidateEmail("malviyashreya26@gmail.com");
+            validateUser.ValidateMobileNo(" 91 8798761833");
+            validateUser.ValidatePassword("Shreya345");
+            validateUser.ValidatePassword("Shreya345");
+           //validateUser.ValidateNumericPassword("shreya@3345");
+           // validateUser.ValidateSpecialcarPassword("shreya@3345");
+           // validateUser.ValidateAllTypeEmail("malviyashreya26@gmail.com");
+           // validateUser.ValidateAllTypeEmail("malviyashreya5526@gmail.com");
+           // validateUser.ValidateAllTypeEmail("malviyashre+26@gmail.com");
+           // validateUser.ValidateAllTypeEmail("sabc_2002@gmail.com");
             Console.ReadKey();
         }
     }
